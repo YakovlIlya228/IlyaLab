@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #define OVERFLOW -101
 #define UNDERFLOW -102
 #define OUT_OF_MEMORY -103
