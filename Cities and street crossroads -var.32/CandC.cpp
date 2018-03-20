@@ -15,7 +15,6 @@ void Cities ::delete_city(){
 void Operation ::check() {
     Cities C;
     int n,num;
-    printf("%i, %i , %i",city_i,MAX_CROSSINGS, CandC[0]);
     for(n=1;n<city_i;n++){
         if(CandC[n]>MAX_CROSSINGS){
             MAX_CROSSINGS=CandC[n];
