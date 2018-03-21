@@ -15,5 +15,6 @@ public:
 class Operation{
 public:
     void check();
+    void show();
 };
 #endif //CITIES_AND_CROSSINGS_CANDC_H
