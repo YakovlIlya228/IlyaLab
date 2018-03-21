@@ -23,9 +23,19 @@ void Operation ::check() {
     }
     printf("City with the most crossings is number %i with %i crossings!\n",num,MAX_CROSSINGS);
 }
+void Operation ::show() {
+    int n;
+    if(city_i!=1){
+        for(n=1;n<city_i;n++){
+            printf("City number %i: %i crossings\n",n,CandC[n]);
+        }
+
+    }
+
+}
 int main() {
     Cities c; Operation o;int tmp;bool check= true;
-    printf("Type in number to choose action!\n1 - Add city\n2 - Delete city\n3 - Check for the city with most crossings among added\n4 - Exit\n:");
+    printf("Type in number to choose action!\n1 - Add city\n2 - Delete previous city\n3 - Check for the city with most crossings among added\n4 - Show all cities\n5 - Exit\n:");
     while(check){
         cin >> tmp;
         switch(tmp){
@@ -41,6 +51,8 @@ int main() {
                 o.check();
                 continue;
             case 4:
+                o.show();
+            case 5:
                 exit(0);
             default:
                 check = false;
