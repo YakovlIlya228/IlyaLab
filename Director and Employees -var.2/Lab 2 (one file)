@@ -1,0 +1,71 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class Employee{
+private:
+    string Name;
+    int Age;
+public:
+    Employee(){
+        setNameAndAge();
+
+    }
+    ~Employee() {
+        cout << "Employee class destructor was executed!\n";
+    }
+    void setNameAndAge(){
+        printf("Enter name of an employee:\n");
+        cin >> Name;
+        printf("Enter age of an employee:\n");
+        cin >> Age ;
+    }
+    string getName(int g){
+        printf("Name:\n");
+        return Name;
+    }
+    int getAge(int g){
+        printf("Age:\n");
+        return Age;
+    }
+
+};
+
+
+class Employer{
+private:
+    string EmrName;
+    int EmrAge;
+public:
+   void setEmrName(){
+       printf("Enter name of an employer:\n");
+       cin >> EmrName;
+   };
+    void setEmrAge(){
+        printf("Enter age of an employer:\n");
+        cin >> EmrAge;
+    }
+    Employer(){
+        setEmrName();
+        setEmrAge();
+        printf("How many employees does employer have?\n");
+        int tmp;
+        cin >> tmp;
+        Employee emp[tmp];
+    }
+    ~Employer(){
+        cout << "Employer class destructor was executed!\n";
+    }
+
+
+};
+
+
+int main(){
+    int tmp1;
+    printf("How many employers u want to add?:\n");
+    cin >> tmp1;
+    Employer emr[tmp1];
+    return 0;
+}
